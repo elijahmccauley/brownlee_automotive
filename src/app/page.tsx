@@ -11,7 +11,7 @@ export default function Home() {
     ["Sunday", "Closed"],
   ];
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-[#8A1118]">
       <main className="flex flex-col row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert w-full"
@@ -66,6 +66,7 @@ export default function Home() {
         </div>
         
       </main>
+      
       
     </div>
   );
