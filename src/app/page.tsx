@@ -1,6 +1,15 @@
 import Image from "next/image";
 
 export default function Home() {
+  const hours = [
+    ["Monday", "8:00 AM - 6:00 PM"],  
+    ["Tuesday", "8:00 AM - 6:00 PM"],
+    ["Wednesday", "8:00 AM - 6:00 PM"],
+    ["Thursday", "8:00 AM - 6:00 PM"],
+    ["Friday", "8:00 AM - 6:00 PM"],
+    ["Saturday", "Closed"],
+    ["Sunday", "Closed"],
+  ];
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
@@ -21,9 +30,35 @@ export default function Home() {
             .
           </li>
           <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
+            +1 (770) 469-2525
           </li>
         </ol>
+        <div className="w-full h-[400px]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11228.428422269608!2d-84.17213790897657!3d33.80785411122952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5af53422d0793%3A0xf06df791288944d2!2sBrownlee%20Automotive!5e0!3m2!1sen!2sus!4v1747107496293!5m2!1sen!2sus"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            loading="lazy"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <table border={1} cellPadding={8} cellSpacing={0}>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+            {hours.map((row, idx) => (
+              <tr key={idx}>
+              <td>{row[0]}</td>
+              <td>{row[1]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
