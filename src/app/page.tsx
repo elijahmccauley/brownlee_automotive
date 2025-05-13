@@ -32,7 +32,7 @@ export default function Home() {
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           
           <li className="tracking-[-.01em]">
-            +1 (770) 469-2525
+            +1 (770) 469-9660
           </li>
         </ol>
         <div className="w-full h-[400px]">
