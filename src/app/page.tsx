@@ -24,23 +24,6 @@ export default function Home() {
         <section className="text-sm font-[family-name:var(--font-geist-mono)] text-center">
           <p className="tracking-tight text-center">Family owned and operated since 1987</p>
         </section>
-        <section className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full justify-items-center">
-          {[
-            ["/acdelco.png", "acgmdelco_logo"],
-            ["/ase.jpg", "ase_logo"],
-            ["/NAPA-Logo.png", "napa_logo"],
-          ].map(([src, alt]) => (
-            <Image
-              key={alt}
-              className="dark:invert"
-              src={src}
-              alt={alt}
-              width={180}
-              height={38}
-              priority
-            />
-          ))}
-        </section>
         <section className="text-sm font-[family-name:var(--font-geist-mono)] text-center sm:text-left">
           <p className="tracking-tight">📞 +1 (770) 469-9660</p>
           <p className="tracking-tight">📍 6573 James B Rivers Memorial Dr, Stone Mountain, GA 30083</p>
@@ -79,12 +62,29 @@ export default function Home() {
           <p className="bg-white rounded shadow-lg leading-relaxed text-sm p-6">Dan has something to say probably</p>
         </section>
         <div className="relative w-full max-w-md mx-auto">
-      <input
-        type="text"
-        placeholder="Search for an athlete"
-        className="w-full p-2 border border-gray-300 rounded"
-      />
-    </div>
+          <input
+            type="text"
+            placeholder="Leave a review"
+            className="w-full p-2 border border-gray-300 rounded"
+          />
+        </div>
+        <section className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full justify-items-center">
+          {[
+            ["/acdelco.png", "acgmdelco_logo"],
+            ["/ase.jpg", "ase_logo"],
+            ["/NAPA-Logo.png", "napa_logo"],
+          ].map(([src, alt]) => (
+            <Image
+              key={alt}
+              className="dark:invert"
+              src={src}
+              alt={alt}
+              width={180}
+              height={38}
+              priority
+            />
+          ))}
+        </section>
       </main>
       
       
