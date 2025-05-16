@@ -7,6 +7,7 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 // import 'tailwindcss/tailwind.css';
 //import { ImageCarousel } from 'image-auto-scroll';
 import { StyleSheet, View } from "react-native";
+import ReviewBox from "./reviewbox"
 
 export default function Home() {
   const hours = [
@@ -124,11 +125,7 @@ export default function Home() {
           </section>
         </section>
         <div className="relative w-full max-w-md mx-auto">
-          <input
-            type="text"
-            placeholder="Leave a review"
-            className="w-full p-2 border border-gray-300 rounded"
-          />
+          <ReviewBox />
         </div>
         <section className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full justify-items-center">
           {[
