@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 // import 'tailwindcss/tailwind.css';
-//import { ImageCarousel } from 'image-auto-scroll';
+// import { ImageCarousel } from 'image-auto-scroll';
 import { StyleSheet, View } from "react-native";
 import ReviewBox from "./reviewbox"
 
@@ -34,7 +34,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % work.length);
-    }, 5000); 
+    }, 5000000); 
     return () => clearInterval(interval);
   }, [work.length]);
   return (
@@ -43,10 +43,9 @@ export default function Home() {
         <section className="sm:text-8xl text-4xl font-[family-name:var(--font-geist-mono)] text-center items-center">
           <p className="tracking-tight text-center">BROWNLEE AUTOMOTIVE</p>
         </section>
-
-        <section className="text-xl font-sans items-center">
-          <p className="tracking-tight text-center">Family owned and operated since 1987</p>
-          <p className="tracking-tight text-center">We work on all makes and models</p>
+        <section className="font-sans text-center">
+          <p className="text-sm sm:text-2xl tracking-tight">📍 6573 James B Rivers Memorial Dr, Stone Mountain, GA 30083</p>
+          <p className="text-sm sm:text-lg tracking-tight">📞 +1 (770) 469-9660</p>
         </section>
 
         <section className="w-full flex flex-col items-center">
@@ -84,9 +83,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="text-sm font-sans text-center sm:text-left">
-          <p className="tracking-tight">📞 +1 (770) 469-9660</p>
-          <p className="tracking-tight">📍 6573 James B Rivers Memorial Dr, Stone Mountain, GA 30083</p>
+        <section className="text-xl font-sans items-center">
+          <p className="tracking-tight text-center">Family owned and operated since 1987</p>
+          <p className="tracking-tight text-center">We work on all makes and models</p>
         </section>
         <div className="w-full h-[400px]">
           <iframe

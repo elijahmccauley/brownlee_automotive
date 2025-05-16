@@ -30,16 +30,16 @@ export default function Home() {
   };
 
   return (
-    <div className="p-4 bg-[#8A1118] rounded shadow-md max-w-md mx-auto">
+    <div className="p-4 bg-[#8A1118] rounded max-w-md mx-auto">
       <h2 className="text-xl font-bold mb-2">Leave a Review</h2>
-      <input
+      {/*<input
         className="border p-2 w-full mb-2 text-black"
         placeholder="Your email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-      />
+      />*/}
       <textarea
-        className="border p-2 w-full mb-2 text-black bg-white"
+        className="border p-2 w-full mb-2 text-black bg-white rounded"
         rows={4}
         placeholder="Your review"
         value={review}
