@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
 import ImageBackground from "next/image";
-// import { View, StyleSheet } from "react-native";
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 // import 'tailwindcss/tailwind.css';
+//import { ImageCarousel } from 'image-auto-scroll';
+import { StyleSheet, View } from "react-native";
 
 export default function Home() {
   const hours = [
@@ -18,17 +19,23 @@ export default function Home() {
     ["Sunday", "Closed"],
   ];
   const work = [
-    ["/work1.jpg", "work1"],
-    ["/work2.jpg", "work2"],
-    ["/work3.jpg", "work3"],
+    ["/w1.jpg", "w1"],
+    ["/w2.jpg", "w2"],
+    ["/w3.jpg", "w3"],
   ]
   const [currentIndex, setCurrentIndex] = useState(0);
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 2) % 3);
+    setCurrentIndex((prevIndex) => (prevIndex + work.length - 1) % work.length);
   };
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % 3);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % work.length);
   };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % work.length);
+    }, 5000); 
+    return () => clearInterval(interval);
+  }, [work.length]);
   return (
     <div className="min-h-screen bg-[#8A1118] p-6 sm:p-20 font-[family-name:var(--font-geist-sans)] text-white text-center">
       <main className="max-w-8xl mx-auto flex flex-col items-center gap-8">
@@ -76,7 +83,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="text-sm font-[family-name:var(--font-geist-mono)] text-center sm:text-left">
+        <section className="text-sm font-sans text-center sm:text-left">
           <p className="tracking-tight">📞 +1 (770) 469-9660</p>
           <p className="tracking-tight">📍 6573 James B Rivers Memorial Dr, Stone Mountain, GA 30083</p>
         </section>
@@ -109,9 +116,12 @@ export default function Home() {
             </tbody>
           </table>
         </section>
-        <section className="w-full text-black text-sm grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <p className="bg-white rounded shadow-lg leading-relaxed text-sm p-6">I recently had my truck's transmission repaired at Brownlee Automotive, and I couldn't be happier with the service. Brett, the service technician, was extremely knowledgeable and efficient, ensuring the repair was done right the first time. I highly recommend Brownlee Automotive for their excellent work and professional staff.</p>
-          <p className="bg-white rounded shadow-lg leading-relaxed text-sm p-6">RL and Brett at Brownlee Automotive have kept my 2004 Honda Oddysey running for over 380 thousand miles</p>
+        <section className="w-full">
+          <h2 className="text-lg font-semibold mb-2">Reviews</h2>
+          <section className="w-full text-black text-sm grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <p className="bg-white rounded shadow-lg leading-relaxed text-sm p-6">I recently had my truck's transmission repaired at Brownlee Automotive, and I couldn't be happier with the service. Brett, the service technician, was extremely knowledgeable and efficient, ensuring the repair was done right the first time. I highly recommend Brownlee Automotive for their excellent work and professional staff.</p>
+            <p className="bg-white rounded shadow-lg leading-relaxed text-sm p-6">RL and Brett at Brownlee Automotive have kept my 2004 Honda Oddysey running for over 380 thousand miles</p>
+          </section>
         </section>
         <div className="relative w-full max-w-md mx-auto">
           <input
