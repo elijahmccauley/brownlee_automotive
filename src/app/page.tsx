@@ -8,6 +8,7 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 // import { ImageCarousel } from 'image-auto-scroll';
 import { StyleSheet, View } from "react-native";
 import ReviewBox from "./reviewbox"
+import Header from "./header"
 
 export default function Home() {
   const hours = [
@@ -39,6 +40,7 @@ export default function Home() {
   }, [work.length]);
   return (
     <div className="min-h-screen bg-[#8A1118] p-6 sm:p-20 font-[family-name:var(--font-geist-sans)] text-white text-center">
+      <Header/>
       <main className="max-w-8xl mx-auto flex flex-col items-center gap-8">
         <section className="sm:text-8xl text-4xl font-[family-name:var(--font-geist-mono)] text-center items-center">
           <p className="tracking-tight text-center">BROWNLEE AUTOMOTIVE</p>
