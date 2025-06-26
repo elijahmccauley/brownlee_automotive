@@ -8,10 +8,10 @@ export default function Home() {
 
   // Array of navigation links for easy mapping
   const navLinks = [
-    { href: "#", label: "Home" },
-    { href: "#", label: "About" },
-    { href: "#", label: "Services" },
-    { href: "#", label: "Contact" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (
