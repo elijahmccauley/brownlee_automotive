@@ -39,7 +39,7 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [work.length]);
   return (
-    <div className="min-h-screen bg-[#8A1118] p-6 sm:p-20 font-[family-name:var(--font-geist-sans)] text-white text-center">
+    <div className="min-h-screen bg-[#8A1118] font-[family-name:var(--font-geist-sans)] text-white text-center">
       <Header/>
       <main className="max-w-8xl mx-auto flex flex-col items-center gap-8">
         <section className="sm:text-8xl text-4xl font-[family-name:var(--font-geist-mono)] text-center items-center">
